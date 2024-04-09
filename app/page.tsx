@@ -1,7 +1,12 @@
 import type { Metadata } from 'next';
 
 export default function IndexPage() {
-  return <div>Hi</div>;
+  return (
+    <main>
+      <h1>Hello World</h1>
+
+    </main>
+  );
 }
 
 export const metadata: Metadata = {
