@@ -1,15 +1,11 @@
-import React from 'react';
+import Banner from '@/app/components/Banner';
 
-const UserDashboard = () => {
+export default async function UserDashboard() {
   return (
     <div>
-      <h1>User Dashboard</h1>
-
-      <p>banner</p>
+      <Banner />
       <p>bulletin board</p>
       <p>Weekly news</p>
     </div>
   );
-};
-
-export default UserDashboard;
+}
