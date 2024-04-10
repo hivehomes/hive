@@ -15,6 +15,12 @@ export const SideNav = () => {
         Dashboard
       </Link>
       <Link
+        className={` ${pathname === '/bulletin' ? 'text-red-200' : ''}`}
+        href="/bulletin"
+      >
+        Bulletin
+      </Link>
+      <Link
         className={` ${pathname === '/deliveries' ? 'text-red-200' : ''}`}
         href="/deliveries"
       >
