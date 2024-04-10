@@ -7,19 +7,17 @@ export default async function UserDashboard() {
   // const { id } = await getUserData('jim.bean@example.com');
 
   return (
-    <div className="grid grid-cols-4 grid-rows-6 gap-4">
-      <div className="col-span-4 border-2 border-red-200">
-        <Banner />
-      </div>
-      <div className="row-start-2 border-2  max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="grid grid-cols-4 grid-rows-5 gap-4 mt-14">
+      <Banner />
+
+      <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link href="/deliveries">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Deliveries{' '}
           </h5>
         </Link>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
+          package delivered on 4/6/24 4:34 PM
         </p>
         <Link
           href="/deliveries"
@@ -42,7 +40,7 @@ export default async function UserDashboard() {
           </svg>
         </Link>
       </div>
-      <div className="col-start-1 row-start-3 border-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="col-start-1 row-start-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link href="/amenities">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Amenities{' '}
@@ -73,7 +71,7 @@ export default async function UserDashboard() {
           </svg>
         </Link>
       </div>
-      <div className="col-start-1 row-start-4 border-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="col-start-1 row-start-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link href="/resources">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Resources{' '}
@@ -104,7 +102,7 @@ export default async function UserDashboard() {
           </svg>
         </Link>
       </div>
-      <div className="col-start-1 row-start-5 border-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="col-start-1 row-start-4 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link href="/dashboard">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Local Offers{' '}
@@ -135,7 +133,7 @@ export default async function UserDashboard() {
           </svg>
         </Link>
       </div>
-      <div className="col-start-1 row-start-6 border-2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="col-start-1 row-start-5 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Link href="/resources">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Resources{' '}
@@ -166,7 +164,7 @@ export default async function UserDashboard() {
           </svg>
         </Link>
       </div>
-      <div className="col-span-2 row-span-5 col-start-2 row-start-2 border-2 ">
+      <div className="col-span-2 row-span-5 col-start-2 row-start-1 ">
         <Link href="/bulletin" className="text-gray-500 text-2xl">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white m-6">
             Bulletin Board
@@ -174,8 +172,10 @@ export default async function UserDashboard() {
         </Link>
         <BulletinBoard />
       </div>
-      <div className="row-span-5 col-start-4 row-start-2 border-2 ">
-        Weekly News
+      <div className="row-span-5 col-start-4 row-start-1 ">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white m-6">
+          Weekly News
+        </h5>
       </div>
     </div>
   );

@@ -1,8 +1,14 @@
+'use client';
+import { useState } from 'react';
+
 export default function Banner() {
+  const [isBannerShown, setIsBannerShown] = useState(true);
   return (
     <div
       id="marketing-banner"
-      className="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-saffron-100 border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600"
+      className={`${
+        isBannerShown ? '' : 'hidden overflow-y-auto overflow-x-hidden'
+      }fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 translate-y-10 bg-saffron-100 border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600`}
     >
       <div className="flex flex-col items-start mb-3 me-4 md:items-center md:flex-row md:mb-0">
         <svg
@@ -24,6 +30,7 @@ export default function Banner() {
         <button
           type="button"
           className="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"
+          onClick={() => setIsBannerShown(!isBannerShown)}
         >
           <svg
             className="w-3 h-3"
