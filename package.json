@@ -11,6 +11,8 @@
     "bcrypt": "^5.1.1",
     "jose": "^5.2.4",
     "jsonwebtoken": "^9.0.2",
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.8.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

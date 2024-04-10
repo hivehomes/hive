@@ -1,5 +1,6 @@
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { NextRequest, NextResponse } from 'next/server';
 import { sql } from '@vercel/postgres';
 
@@ -23,18 +24,26 @@ export async function decrypt(input: string): Promise<any> {
 
 export async function login(formData: FormData) {
   // Verify credentials && get the user
-  console.log(formData);
-  const user = { email: formData.get('email') };
-  console.log(user);
-  const query = await sql`SELECT * FROM users WHERE email = ${user}`;
-  //somehow query the db to check if user exists
+  //console.log(formData);
+  const email = formData.get('email');
+  const password = formData.get('password');
+  const { rows } =
+    await sql`SELECT id,first_name, unit_id FROM users WHERE email = ${email} AND password = ${password}`;
+
+  console.log('rows arr', rows);
+  if (rows.length === 0) {
+    console.log('here in this conditional');
+    return new Response('Invalid email or password', { status: 401 });
+  }
 
   // Create the session
+  const user = rows[0];
   const expires = new Date(Date.now() + 10 * 1000);
-  const session = await encrypt({ query, expires });
+  const session = await encrypt({ id: user.id, expires });
 
   // Save the session in a cookie
   cookies().set('session', session, { expires, httpOnly: true });
+  return redirect('/dashboard');
 }
 
 export async function logout() {
