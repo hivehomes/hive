@@ -14,7 +14,7 @@ export async function getUserData(email: string) {
     const user = {} as AuthUserData;
 
     const userTableData = await sql`SELECT * FROM users where email = ${email}`;
-    //console.log('logging user table data: ', userTableData);
+    console.log('logging user table data: ', userTableData);
     user.id = userTableData?.rows[0].id;
     user.email = userTableData?.rows[0].email;
     user.firstName = userTableData?.rows[0].first_name;
@@ -51,3 +51,18 @@ export async function getUserData(email: string) {
 }
 
 // const email = 'jim.bean@example.com';
+
+export async function createNewPost(
+  title: string,
+  message: string,
+  category: string,
+  posterId: number
+) {
+  try {
+    const response =
+      await sql`INSERT INTO bulletin (poster_id, post_type, title, body) VALUES (${posterId}, ${category}, ${title}, ${message})`;
+    return response;
+  } catch (error) {
+    return console.error('Error inserting new post:', error);
+  }
+}
