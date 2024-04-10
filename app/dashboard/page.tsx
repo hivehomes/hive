@@ -12,7 +12,7 @@ export default async function UserDashboard() {
   return (
     <div>
       <h1>User Dashboard</h1>
-      <Banner />
+      {/* <Banner /> */}
       <Tile userId={id} />
       <p>banner</p>
       <BulletinBoard />
