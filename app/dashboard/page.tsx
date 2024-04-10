@@ -1,6 +1,7 @@
 import React from 'react';
 import { getUserData } from '@/lib/data';
 import Tile from '@/app/components/dashboard/Tile';
+import Banner from '@/app/components/Banner';
 
 export default async function UserDashboard() {
 
@@ -9,6 +10,7 @@ export default async function UserDashboard() {
   return (
     <div>
       <h1>User Dashboard</h1>
+      <Banner />
       <Tile userId={id} />
       <p>banner</p>
       <p>bulletin board</p>

@@ -3,39 +3,31 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import styles from '../styles/layout.module.css';
-
 export const SideNav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className={styles.nav}>
+    <nav className="">
       <Link
-        className={`${styles.link} ${pathname === '/' ? styles.active : ''}`}
+        className={` ${pathname === '/dashboard' ? 'text-red-200' : ''}`}
         href="/dashboard"
       >
         Dashboard
       </Link>
       <Link
-        className={`${styles.link} ${
-          pathname === '/deliveries' ? styles.active : ''
-        }`}
+        className={` ${pathname === '/deliveries' ? 'text-red-200' : ''}`}
         href="/deliveries"
       >
         Deliveries
       </Link>
       <Link
-        className={`${styles.link} ${
-          pathname === '/frontdesk' ? styles.active : ''
-        }`}
+        className={` ${pathname === '/frontdesk' ? 'text-red-200' : ''}`}
         href="/frontdesk"
       >
         Front Desk
       </Link>
       <Link
-        className={`${styles.link} ${
-          pathname === '/resources' ? styles.active : ''
-        }`}
+        className={` ${pathname === '/resources' ? 'text-red-200' : ''}`}
         href="/resources"
       >
         Resources

@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
-import { StoreProvider } from './StoreProvider';
-import { SideNav } from './components/SideNav';
+import { StoreProvider } from '@/app/StoreProvider';
+import { SideNav } from '@/app/components/SideNav';
 
+import Header from '@/app/components/Header';
 import './styles/globals.css';
-import styles from './styles/layout.module.css';
 
 interface Props {
   readonly children: ReactNode;
@@ -14,9 +14,10 @@ export default function RootLayout({ children }: Props) {
     <StoreProvider>
       <html lang="en">
         <body>
-          <section className={styles.container}>
+          <section className="">
             <SideNav />
-            <main className={styles.main}>{children}</main>
+            <Header />
+            <main className="">{children}</main>
           </section>
         </body>
       </html>
