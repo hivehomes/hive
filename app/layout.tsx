@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
-import { StoreProvider } from '@/app/StoreProvider';
-import { SideNav } from '@/app/components/SideNav';
+import { SideNav } from './components/SideNav';
 
 import Header from '@/app/components/Header';
 import './styles/globals.css';
@@ -11,7 +10,6 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <StoreProvider>
       <html lang="en">
         <body>
           <section className="">
@@ -21,6 +19,5 @@ export default function RootLayout({ children }: Props) {
           </section>
         </body>
       </html>
-    </StoreProvider>
   );
 }
