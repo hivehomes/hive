@@ -33,7 +33,7 @@ export default async function UserDashboard() {
           </Link>
 
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            package delivered on 4/6/24 4:34 PM
+            1 package delivered on 4/6/24 4:34 PM
           </p>
           <Link
             href="/deliveries"
@@ -240,10 +240,10 @@ export default async function UserDashboard() {
           </div>
 
           <p>
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order. Here are the biggest enterprise
-            technology acquisitions of 2021 so far, in reverse chronological
-            order.
+            <b>Roof top yoga class</b> on Friday, April 12 by Charlie Schubach
+          </p>
+          <p>
+            <b>Codesmith Graduation Party</b> on Saturday, April 19 🎉
           </p>
         </div>
       </div>

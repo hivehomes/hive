@@ -10,7 +10,7 @@ export default function Banner() {
         id="marketing-banner"
         className={`${
           isBannerShown ? '' : 'hidden overflow-y-auto overflow-x-hidden'
-        }fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 translate-y-10 bg-saffron-100 border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600`}
+        }fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 translate-y-24 bg-saffron-100 border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600`}
       >
         <div className="flex flex-col items-start mb-3 me-4 md:items-center md:flex-row md:mb-0">
           <svg

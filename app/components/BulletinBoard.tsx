@@ -79,7 +79,8 @@ export default async function BulletinBoard() {
           <li>
             <a
               href="#"
-              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              aria-current="page"
+              className="flex items-center justify-center px-3 h-8 text-saffron-600 border border-gray-300 bg-saffron-50 hover:bg-saffron-100 hover:text-saffron-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
             >
               1
             </a>
@@ -95,8 +96,7 @@ export default async function BulletinBoard() {
           <li>
             <a
               href="#"
-              aria-current="page"
-              className="flex items-center justify-center px-3 h-8 text-saffron-600 border border-gray-300 bg-saffron-50 hover:bg-saffron-100 hover:text-saffron-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+              className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
             >
               3
             </a>
