@@ -13,12 +13,12 @@ export default function Banner() {
         >
           <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
         </svg>
-        <p className="flex items-center text-sm font-normal text-gray-600 dark:text-gray-400">
+        <div className="flex items-center text-sm font-normal text-gray-600 dark:text-gray-400 gap-2">
           <p className="font-semibold">Elevator 2 Maintenance:</p> Monday, March
           18th: Please be advised that Elevator 2 will undergo routine
           maintenance on Monday, March 18th, from 9:00 AM to 12:00 PM. During
           this period, please expect delays in elevator service.
-        </p>
+        </div>
       </div>
       <div className="flex items-center flex-shrink-0">
         <button

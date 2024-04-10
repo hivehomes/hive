@@ -1,10 +1,9 @@
 import React from 'react';
 import { getUserData } from '@/lib/data';
-import Tile from '@/app/components/dashboard/Tile';
+import Tile from '@/app/components/Tile';
 import Banner from '@/app/components/Banner';
 
 export default async function UserDashboard() {
-
   const { id } = await getUserData('jim.bean@example.com');
 
   return (
@@ -17,4 +16,4 @@ export default async function UserDashboard() {
       <p>Weekly news</p>
     </div>
   );
-};
+}
