@@ -11,14 +11,14 @@ export default async function Header() {
   } catch (error) {
     console.error('Error running query', error);
   }
-
-  const { rows: users } = data;
+  console.log('data', data)
+  // const { rows: users } = data;
 
   return (
     <header className="container flex justify-between w-full ">
       <h1>330 7th Ave</h1>
       <div className="flex justify-around gap-2">
-        <h1>{`${users[0].first_name} ${users[0].last_name}, #${users[0].unit_num}`}</h1>
+        {/* <h1>{`${users[0].first_name} ${users[0].last_name}, #${users[0].unit_num}`}</h1> */}
         <button>Logout</button>
       </div>
     </header>
