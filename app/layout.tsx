@@ -15,11 +15,10 @@ export default function RootLayout({ children }: Props) {
       <html lang="en">
         <body>
           <section className="">
-            <SideNav />
+            {/* <SideNav /> */}
             <Header />
             <main className="">{children}</main>
           </section>
-          <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         </body>
       </html>
     </StoreProvider>
