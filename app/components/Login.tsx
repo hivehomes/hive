@@ -6,7 +6,7 @@ import {
   logout,
 } from '@/lib/features/authentication/userSlice';
 
-const Login = () => {
+export default function SignIn() {
   const session = await getSession();
   return (
     <section>
@@ -16,15 +16,9 @@ const Login = () => {
           redirect('/dashboard');
         }}
       >
-        <input type="email" placeholder='email' />
-        <input type="name" placeholder='first name' />
-        <input type="name" placeholder='last name' />
-        <input type="password" placeholder='password' />
-        <input type="tel" placeholder='cell phone' />
-        <input type="number" placeholder='unit number' />
+        <input type="email" placeholder="email" />
+        <input type="password" placeholder="password" />
       </form>
     </section>
   );
-};
-
-export default Login;
+}

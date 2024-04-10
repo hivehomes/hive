@@ -1,4 +1,5 @@
 import React from 'react';
+import BulletinBoard from '@/app/components/BulletinBoard';
 
 const UserDashboard = () => {
   return (
@@ -6,7 +7,7 @@ const UserDashboard = () => {
       <h1>User Dashboard</h1>
 
       <p>banner</p>
-      <p>bulletin board</p>
+      <BulletinBoard />
       <p>Weekly news</p>
     </div>
   );

@@ -2,11 +2,11 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import {
   getSession,
-  login,
+  signup,
   logout,
 } from '@/lib/features/authentication/userSlice';
 
-const Login = () => {
+export default function SignUp() {
   const session = await getSession();
   return (
     <section>
@@ -16,15 +16,13 @@ const Login = () => {
           redirect('/dashboard');
         }}
       >
-        <input type="email" placeholder='email' />
-        <input type="name" placeholder='first name' />
-        <input type="name" placeholder='last name' />
-        <input type="password" placeholder='password' />
-        <input type="tel" placeholder='cell phone' />
-        <input type="number" placeholder='unit number' />
+        <input type="email" placeholder="email" />
+        <input type="name" placeholder="first name" />
+        <input type="name" placeholder="last name" />
+        <input type="password" placeholder="password" />
+        <input type="tel" placeholder="cell phone" />
+        <input type="number" placeholder="unit number" />
       </form>
     </section>
   );
-};
-
-export default Login;
+}
