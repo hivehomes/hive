@@ -16,10 +16,8 @@ export default async function Header() {
   }
 
   const users = data?.rows[0];
-  console.log('logging users: ', users)
 
   const handleLogOut = () => {
-    console.log('log out clicked');
     redirect('/login');
   }
 
