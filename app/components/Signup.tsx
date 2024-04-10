@@ -1,18 +1,14 @@
 import React from 'react';
 import { redirect } from 'next/navigation';
-import {
-  getSession,
-  signup,
-  logout,
-} from '@/lib/features/authentication/userSlice';
+//import { } from '@/lib/authentication';
 
-export default function SignUp() {
-  const session = await getSession();
+export default function Signup() {
+  //const session = await getSession();
   return (
     <section>
       <form
         action={async (formData) => {
-          await login(formData);
+          //await login(formData);
           redirect('/dashboard');
         }}
       >

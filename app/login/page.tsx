@@ -1,30 +1,31 @@
-import React from 'react';
 import { redirect } from 'next/navigation';
-import {
-  getSession,
-  login,
-  logout,
-} from '@/lib/features/authentication/userSlice';
+import { getSession, login, logout } from '@/lib/actions';
 
-const Login = () => {
+export default async function Login() {
   const session = await getSession();
   return (
     <section>
       <form
         action={async (formData) => {
+          'use server';
           await login(formData);
           redirect('/dashboard');
         }}
       >
-        <input type="email" placeholder='email' />
-        <input type="name" placeholder='first name' />
-        <input type="name" placeholder='last name' />
-        <input type="password" placeholder='password' />
-        <input type="tel" placeholder='cell phone' />
-        <input type="number" placeholder='unit number' />
+        <input type="email" placeholder="Email" />
+        <br />
+        <button type="submit">Login</button>
       </form>
+      <form
+        action={async () => {
+          'use server';
+          await logout();
+          redirect('/login');
+        }}
+      >
+        <button type="submit">Logout</button>
+      </form>
+      <pre>{JSON.stringify(session, null, 2)}</pre>
     </section>
   );
-};
-
-export default Login;
+}

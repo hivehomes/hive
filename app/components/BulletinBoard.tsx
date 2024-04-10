@@ -18,7 +18,7 @@ export default async function BulletinBoard() {
   }
 
   const { rows: posts } = data;
-  console.log(data);
+  //console.log(data);
 
   return (
     <>
