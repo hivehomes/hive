@@ -3,6 +3,7 @@ import { StoreProvider } from '@/app/StoreProvider';
 import { SideNav } from '@/app/components/SideNav';
 
 import Header from '@/app/components/Header';
+import './styles/globals.css';
 
 interface Props {
   readonly children: ReactNode;
